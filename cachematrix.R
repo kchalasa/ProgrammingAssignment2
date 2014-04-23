@@ -1,6 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
-
+## My R Programming Assignment 2
 ## Function makeCacheMatrix 
 ## This function creates a customized list that contains four functions
 ## Function 1 - "set" - Assigns matrix initial values and resets the CACHE
