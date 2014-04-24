@@ -31,13 +31,14 @@ makeCacheMatrix <- function(x = matrix()) {
 ## It uses "solve" R-function to take a square matrix and return its Inverse.
 
 cacheSolve <- function(x, ...) {
-     m <- x$getInverse()            ## Func. to get matrix Inverse from Cache.
+     m <- x$getInverse()            ## Call Fn. to get matrix Inverse from Cache
+
      if(!is.null(m)) {
           message("getting cached data")
           return(m)                 ## Found in CACHE so return matrix inverse
      }
      data <- x$get()                ## Invoke function to get orig. matrix 'x'
-     m <- solve(data, ...)          ## R function to compute matrix inverse
+     m <- solve(data, ...)          ## Invoke R fn. to compute matrix inverse
      x$setInverse(m)                ## Invoke function for matrix inverse
      m                              ## Return matrix that is the inverse of 'x'
 }
